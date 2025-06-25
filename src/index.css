@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Modern palette */
+  --primary: #3B82F6; /* Vibrant Blue */
+  --secondary: #10B981; /* Emerald Green */
+  --tertiary: #F59E0B; /* Warm Amber */
+  --quaternary: #64748B; /* Cool Slate */
+  --background-light: #F9FAFB;
+  --text-dark: #1F2937;
+  --table-row-hover: #E5E7EB;
+  --error: #ef4444;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--tertiary);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--background-light);
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  color: var(--primary);
+  letter-spacing: -1px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid var(--quaternary);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+button:hover {
+  background-color: var(--tertiary);
+  border-color: var(--tertiary);
+  color: #fff;
+}
+button:focus,
+button:focus-visible {
+  outline: 3px solid var(--secondary);
+}
+
+/* Table styles */
+table {
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+thead {
+  background: var(--quaternary);
+}
+th {
+  color: #fff;
+}
+tbody tr:hover {
+  background: var(--table-row-hover);
+}
+td, th {
+  border-bottom: 1px solid var(--quaternary);
+}
+
+.text-red-600, .text-red-500 {
+  color: var(--error) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #3B82F6;
+    --secondary: #10B981;
+    --tertiary: #F59E0B;
+    --quaternary: #334155;
+    --background-light: #1E293B;
+    --text-dark: #F9FAFB;
+    --table-row-hover: #334155;
+    --error: #f87171;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+  }
+  body {
+    background: var(--background-light);
+  }
+  h1 {
+    color: var(--primary);
+  }
+  table {
+    background: #232946;
+  }
+}
